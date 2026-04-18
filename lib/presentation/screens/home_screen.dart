@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// 🔹 Greeting
+              
               Text(
                 getGreeting(),
                 style: const TextStyle(
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               const SizedBox(height: 10),
 
-              /// 🔹 Stats Cards
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               const SizedBox(height: 15),
 
-              /// 🔍 Search Bar
+              
               TextField(
                 decoration: InputDecoration(
                   hintText: "Search tasks...",
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               const SizedBox(height: 10),
 
-              /// 🔘 Filters
+              
               Row(
                 children: [
                   _buildFilterChip("All", "all"),
@@ -103,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               const SizedBox(height: 10),
 
-              /// 📋 Task List
+              
               Expanded(
                 child: tasks.isEmpty
                     ? const Center(
@@ -158,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
 
-      /// ➕ Floating Button
+      
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.push(
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// 🔹 Stat Card Widget
+  
   Widget _buildStatCard(String title, int value, Color color) {
     return Expanded(
       child: Card(
@@ -201,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// 🔹 Filter Chip
+  
   Widget _buildFilterChip(String label, String value) {
     final isSelected = filter == value;
 
